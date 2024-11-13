@@ -57,7 +57,7 @@ int main() {
 
     //Создаем число равное сумме обратных значений массивов arr1 и arr2
 
-    int final[20];
+    int final[100];
     int h = -1;
 
     printf("array value =");
