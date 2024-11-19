@@ -29,8 +29,8 @@ int main() {
     }
 
     //Вводим значение первого массива
-    int vrem1 = reverseMassive(arr1, n);
-    printf("Reversed number from the first list: %d\n", vrem1);
+    int temporary_1 = reverseMassive(arr1, n);
+    printf("Reversed number from the first list: %d\n", temporary_1);
 
     printf("Enter the number of characters in the second list: ");
     scanf("%d", &m);
@@ -49,11 +49,10 @@ int main() {
 
     //Вводим значение второго массива
 
-    int vrem2 = reverseMassive(arr2, m);
-    printf("Reversed number from the second list: %d\n", vrem2);
+    int temporary_2 = reverseMassive(arr2, m);
+    printf("Reversed number from the second list: %d\n", temporary_2);
 
-    int number = vrem1 + vrem2;
-    printf("sum vrem1 + vrem2 =%d\n", number);
+    int sought_for = temporary_1 + temporary_2;
 
     //Создаем число равное сумме обратных значений массивов arr1 и arr2
 
@@ -63,11 +62,11 @@ int main() {
     printf("array value =");
 
     for( int i = 0; i != h; i++ ){
-        final[i] = number % 10;
-        number /= 10;
+        final[i] = sought_for % 10;
+        sought_for /= 10;
 
 
-        if (number == 0){
+        if (sought_for == 0){
             h = 0;
             for( int p = 2; p != h; p++){
                 printf(" " "%d", final[p-2]);
@@ -80,5 +79,8 @@ int main() {
 
     }
 
+    printf("\n");
+
     //Из числа number создаем массив в обратном порядке
+}
 }
